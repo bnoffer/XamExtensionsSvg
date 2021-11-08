@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarin.Forms.Extensions.Svg</id>
+    <version>1.0.0-pre1</version>
+    <title>Xamarin.Forms.Extensions.Svg</title>
+    <authors>bnoffer</authors>
+    <owners>bnoffer</owners>
+    <projectUrl>https://github.com/bnoffer/XamExtensionsSvg</projectUrl>
+    <license type="expression">MIT</license>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>SkiaSharp based component to load SVG images from the Embedded Resources of an Xamarin.Forms Application.</description>
+    <!--<readme>docs\README.md</readme>-->
+    <copyright>Copyright (c) 2021 Bastian Noffer</copyright>
+    <tags>Xamarin.Forms SVG Image Component SkiaSharp</tags>
+    <dependencies>
+      <group targetFramework="netstandard2.0">
+        <dependency id="SkiaSharp" version="2.80.3" />
+        <dependency id="SkiaSharp.Views.Forms" version="2.80.3" />
+        <dependency id="SkiaSharp.Svg" version="1.60.0" />
+        <dependency id="SkiaSharp.Extended" version="1.60.0" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2196" />
+      </group>
+      <group targetFramework="MonoAndroid">
+        <dependency id="SkiaSharp" version="2.80.3" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2196" />
+      </group>
+      <group targetFramework="MonoTouch">
+        <dependency id="SkiaSharp" version="2.80.3" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2196" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- .net standard2.0 -->
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.dll" target="lib/netstandard2.0" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.deps.json" target="lib/netstandard2.0" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.pdb" target="lib/netstandard2.0" />
+
+    <!-- Mono.Android -->
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.dll" target="lib/MonoAndroid" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.deps.json" target="lib/MonoAndroid" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.pdb" target="lib/MonoAndroid" />
+
+    <!-- Mono.Touch -->
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.dll" target="lib/MonoTouch" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.deps.json" target="lib/MonoTouch" />
+    <file src="bin/Release/netstandard2.0/XamExtensionsSvg.pdb" target="lib/MonoTouch" />
+
+    <!-- docs -->
+    <file src="..\README.md" target="docs\" />
+  </files>
+</package>

@@ -16,6 +16,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0BEA486-974F-4FF6-8740-AF7B6C481271}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		LICENSE = LICENSE
 	EndProjectSection
 EndProject
 Global
@@ -87,5 +88,8 @@ Global
 		{BD8447B1-BB8C-4AA2-A635-4CF88CCA6B58} = {3D94071D-59C4-4FC1-BA0F-498DDA18C0BC}
 		{0711AEB1-5F94-46A9-B3D6-1967B806F5A1} = {3D94071D-59C4-4FC1-BA0F-498DDA18C0BC}
 		{A9BC361E-FC56-4EDB-A382-1471C22299FA} = {3D94071D-59C4-4FC1-BA0F-498DDA18C0BC}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 1.0.0
 	EndGlobalSection
 EndGlobal
