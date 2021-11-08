@@ -43,8 +43,10 @@ This project contains a Sample Application in the folder `Sample`.
 
 ## Acknowledgements
 This work is based on an article and code sample by
-@AlexPshul http://www.pshul.com/2018/01/25/xamarin-forms-using-svg-images-with-skiasharp/
-and some inspiration from muak/SvgImageSource by @muak
+
+[@AlexPshul](https://github.com/AlexPshul) http://www.pshul.com/2018/01/25/xamarin-forms-using-svg-images-with-skiasharp/
+
+and some inspiration from [muak/SvgImageSource](https://github.com/muak/SvgImageSource) by [@muak](https://github.com/muak).
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
