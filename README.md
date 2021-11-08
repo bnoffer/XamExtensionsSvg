@@ -39,7 +39,7 @@ Afterwards you can use the SvgImage View in your App:
 </ContentPage>
 ```
 
-If you want to change the SVGs color you can use the `TintColor property:
+If you want to change the SVGs color you can use the `TintColor` property:
 
 ```xml
        <svg:SvgImage Source="colours.svg" WidthRequest="20" HeightRequest="20" TintColor="#fcd303" />
