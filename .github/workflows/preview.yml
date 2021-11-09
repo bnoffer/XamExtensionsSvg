@@ -1,4 +1,4 @@
-name: Release Nuget Package
+name: Release Preview Nuget Package
 
 on:
   push:
