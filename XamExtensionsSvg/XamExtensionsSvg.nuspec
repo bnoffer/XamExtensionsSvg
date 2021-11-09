@@ -23,6 +23,8 @@
       </group>
       <group targetFramework="MonoAndroid">
         <dependency id="SkiaSharp" version="2.80.3" />
+        <dependency id="SkiaSharp.Svg" version="1.60.0" />
+        <dependency id="SkiaSharp.Extended" version="1.60.0" />
         <dependency id="Xamarin.Forms" version="5.0.0.2196" />
       </group>
       <group targetFramework="MonoTouch">
