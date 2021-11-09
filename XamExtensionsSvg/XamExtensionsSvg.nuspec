@@ -10,7 +10,7 @@
     <license type="expression">MIT</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SkiaSharp based component to load SVG images from the Embedded Resources of an Xamarin.Forms Application.</description>
-    <!--<readme>docs\README.md</readme>-->
+    <readme>docs\README.md</readme>
     <copyright>Copyright (c) 2021 Bastian Noffer</copyright>
     <tags>Xamarin.Forms SVG Image Component SkiaSharp</tags>
     <dependencies>
