@@ -6,6 +6,8 @@ SkiaSharp based component to load SVG images from the Embedded Resources of an X
 
 ![build](https://github.com/bnoffer/XamExtensionsSvg/actions/workflows/ci.yml/badge.svg)
 
+[![NuGet](https://img.shields.io/nuget/v/Xamarin.Forms.Extensions.Svg.svg?style=flat-square&label=nuget)](https://www.nuget.org/packages/Xamarin.Forms.Extensions.Svg/
+
 ## Setup
 
 Install the library via Nuget, add the latest version of SkiaSharp to your Apps Shared and Platform Projects and add the following line to your Apps `App.xaml.cs`:
