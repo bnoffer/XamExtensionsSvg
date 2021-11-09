@@ -1,0 +1,28 @@
+﻿name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    working-directory: ./XamExtensionsSvg
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      working-directory: ./XamExtensionsSvg
+    name: Build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      # - uses: actions/setup-dotnet@v1
+      - uses: nuget/setup-nuget@v1
+      - run: nuget restore ../XamExtensionsSvg.sln
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.3
+      - run: msbuild XamExtensionsSvg.csproj
