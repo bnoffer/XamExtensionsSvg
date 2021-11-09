@@ -43,7 +43,7 @@ jobs:
       - name: Pack
         run: |
           $version=${{ steps.tag.outputs.result }}
-          $version=$version.replace(/\/refs\/tags\//, '')
+          $version=$version.replace('/\/refs\/tags\//', '')
           nuget pack XamExtensionsSvg.nuspec -Prop Configuration=Release -verbosity detailed -basepath ./ -OutputDirectory ./package -Version $version
       - name: Setup Nuget Push
         run: nuget setApiKey "$env:NUGET_ORG_TOKEN"
@@ -52,5 +52,5 @@ jobs:
       - name: Push
         run: |
           $version=${{ steps.tag.outputs.result }}
-          $version=$version.replace(/\/refs\/tags\//, '')
+          $version=$version.replace('/\/refs\/tags\//', '')
           nuget push package/Xamarin.Forms.Extensions.Svg.${{ steps.tag.outputs.result }}.nupkg -Source https://api.nuget.org/v3/index.json
