@@ -1,2 +1,2 @@
 #!/bin/sh
-nuget pack XamExtensionsSvg.nuspec -symbols -Prop Configuration=Release -verbosity detailed -basepath ./ -OutputDirectory ./package
+nuget pack XamExtensionsSvg.nuspec -Prop Configuration=Release -verbosity detailed -basepath ./ -OutputDirectory ./package
