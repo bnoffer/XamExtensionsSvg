@@ -39,7 +39,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.0.3
       - name: Build
-        run: msbuild XamExtensionsSvg.csproj
+        run: msbuild XamExtensionsSvg.csproj /property:Configuration=Release
       - name: Pack
         run: |
           $version=${{ steps.tag.outputs.result }}
