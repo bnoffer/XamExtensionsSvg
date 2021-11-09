@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>Xamarin.Forms.Extensions.Svg</id>
-    <version>1.0.0-pre1</version>
+    <version>1.0.0</version>
     <title>Xamarin.Forms.Extensions.Svg</title>
     <authors>bnoffer</authors>
     <owners>bnoffer</owners>

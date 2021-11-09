@@ -1,4 +1,16 @@
-﻿using System;
+﻿/*
+ * ----------------------------------------------------------
+ * 
+ * Xamarin.Forms.Extensions.Svg
+ * 
+ * Project Url: https://github.com/bnoffer/XamExtensionsSvg
+ * 
+ * Copyright (C) 2021 Bastian Noffer
+ * 
+ * ----------------------------------------------------------
+ */
+
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -15,7 +27,6 @@ namespace Xamarin.Forms.Extensions.Svg
 
         private readonly SKCanvasView _canvasView = new SKCanvasView();
         private static Assembly _assemblyCache;
-        private bool _isTintColorSet = false;
 
         #endregion
 
@@ -26,6 +37,9 @@ namespace Xamarin.Forms.Extensions.Svg
         public static readonly BindableProperty SourceProperty = BindableProperty.Create(
             nameof(Source), typeof(string), typeof(SvgImage), default(string), propertyChanged: RedrawCanvas);
 
+        /// <summary>
+        /// Filename of the Source SVG Image
+        /// </summary>
         public string Source
         {
             get => (string)GetValue(SourceProperty);
@@ -35,6 +49,9 @@ namespace Xamarin.Forms.Extensions.Svg
         public static readonly BindableProperty TintColorProperty = BindableProperty.Create(
             nameof(TintColor), typeof(Color), typeof(SvgImage), Color.Transparent, propertyChanged: RedrawCanvas);
 
+        /// <summary>
+        /// Color the SVG should be rendered in, set to Transparent for no no alterations.
+        /// </summary>
         public Color TintColor
         {
             get => (Color)GetValue(TintColorProperty);
@@ -47,6 +64,9 @@ namespace Xamarin.Forms.Extensions.Svg
 
         #region Constructor
 
+        /// <summary>
+        /// Ctor
+        /// </summary>
         public SvgImage()
         {
             Padding = new Thickness(0);
