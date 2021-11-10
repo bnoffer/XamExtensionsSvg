@@ -129,38 +129,46 @@ namespace Xamarin.Forms.Extensions.Svg
                 return;
 
             var resourceId = GetRealResource(Source);
-            using (Stream stream = _assemblyCache.GetManifestResourceStream(resourceId))
+
+            try
             {
-                SKSvg svg = new SKSvg();
-                svg.Load(stream);
-
-                SKImageInfo info = args.Info;
-                canvas.Translate(info.Width / 2f, info.Height / 2f);
-
-                SKRect bounds = svg.Picture.CullRect;
-                float xRatio = info.Width / bounds.Width;
-                float yRatio = info.Height / bounds.Height;
-
-                float ratio = Math.Min(xRatio, yRatio);
-
-                canvas.Scale(ratio);
-                canvas.Translate(-bounds.MidX, -bounds.MidY);
-
-                if (TintColor == Color.Transparent)
-                    canvas.DrawPicture(svg.Picture);
-                else
+                using (Stream stream = _assemblyCache.GetManifestResourceStream(resourceId))
                 {
-                    using (var paint = new SKPaint())
+                    SKSvg svg = new SKSvg();
+                    svg.Load(stream);
+
+                    SKImageInfo info = args.Info;
+                    canvas.Translate(info.Width / 2f, info.Height / 2f);
+
+                    SKRect bounds = svg.Picture.CullRect;
+                    float xRatio = info.Width / bounds.Width;
+                    float yRatio = info.Height / bounds.Height;
+
+                    float ratio = Math.Min(xRatio, yRatio);
+
+                    canvas.Scale(ratio);
+                    canvas.Translate(-bounds.MidX, -bounds.MidY);
+
+                    if (TintColor == Color.Transparent)
+                        canvas.DrawPicture(svg.Picture);
+                    else
                     {
-                        var color = TintColor.ToSKColor();
+                        using (var paint = new SKPaint())
+                        {
+                            var color = TintColor.ToSKColor();
 
-                        paint.ColorFilter = SKColorFilter.CreateBlendMode(
-                            color,
-                            SKBlendMode.SrcIn);
+                            paint.ColorFilter = SKColorFilter.CreateBlendMode(
+                                color,
+                                SKBlendMode.SrcIn);
 
-                        canvas.DrawPicture(svg.Picture, paint);
+                            canvas.DrawPicture(svg.Picture, paint);
+                        }
                     }
                 }
+            }
+            catch (Exception ex)
+            {
+                throw new SvgImageException($"Error while trying to load Resource Id {resourceId}.", ex);
             }
         }
 
