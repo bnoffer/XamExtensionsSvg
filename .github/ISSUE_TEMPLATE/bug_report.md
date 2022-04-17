@@ -23,8 +23,5 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**ownCloud / NextCloud version (required):**
-ownCloud 8.2
-
 **Additional context**
 Add any other context about the problem here.
