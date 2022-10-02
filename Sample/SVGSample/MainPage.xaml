@@ -22,6 +22,7 @@
         </Label>
         <svg:SvgImage Source="tiger.svg" WidthRequest="100" HeightRequest="100" />
         <svg:SvgImage Source="colours.svg" WidthRequest="20" HeightRequest="20" TintColor="#fcd303" />
+        <Button Text="Click me" Clicked="Button_Clicked" />
     </StackLayout>
 
 </ContentPage>

@@ -12,9 +12,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
-    <PackageReference Include="SkiaSharp" Version="2.80.3" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="SkiaSharp" Version="2.88.2" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="SkiaSharp" />
@@ -23,13 +23,13 @@
     <None Remove="Resources\colours.svg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\XamExtensionsSvg\XamExtensionsSvg.csproj" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\tiger.svg" />
     <EmbeddedResource Include="Resources\colours.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\XamExtensionsSvg\XamExtensionsSvg.csproj" />
   </ItemGroup>
 </Project>
