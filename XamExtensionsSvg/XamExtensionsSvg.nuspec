@@ -15,23 +15,23 @@
     <tags>Xamarin.Forms SVG Image Component SkiaSharp</tags>
     <dependencies>
       <group targetFramework="netstandard2.0">
-        <dependency id="SkiaSharp" version="2.88.2" />
-        <dependency id="SkiaSharp.Views.Forms" version="2.88.2" />
+        <dependency id="SkiaSharp" version="2.88.3" />
+        <dependency id="SkiaSharp.Views.Forms" version="2.88.3" />
         <dependency id="SkiaSharp.Svg" version="1.60.0" />
         <dependency id="SkiaSharp.Extended" version="1.60.0" />
-        <dependency id="Xamarin.Forms" version="5.0.0.2515" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2545" />
       </group>
       <group targetFramework="MonoAndroid">
-        <dependency id="SkiaSharp" version="2.88.2" />
-        <dependency id="SkiaSharp.Views.Forms" version="2.88.2" />
+        <dependency id="SkiaSharp" version="2.88.3" />
+        <dependency id="SkiaSharp.Views.Forms" version="2.88.3" />
         <dependency id="SkiaSharp.Svg" version="1.60.0" />
         <dependency id="SkiaSharp.Extended" version="1.60.0" />
-        <dependency id="Xamarin.Forms" version="5.0.0.2515" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2545" />
       </group>
       <group targetFramework="MonoTouch">
-        <dependency id="SkiaSharp" version="2.88.2" />
-        <dependency id="SkiaSharp.Views.Forms" version="2.88.2" />
-        <dependency id="Xamarin.Forms" version="5.0.0.2515" />
+        <dependency id="SkiaSharp" version="2.88.3" />
+        <dependency id="SkiaSharp.Views.Forms" version="2.88.3" />
+        <dependency id="Xamarin.Forms" version="5.0.0.2545" />
       </group>
     </dependencies>
   </metadata>
