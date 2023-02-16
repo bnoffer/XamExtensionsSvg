@@ -168,7 +168,7 @@ namespace Xamarin.Forms.Extensions.Svg
             }
             catch (Exception ex)
             {
-                throw new SvgImageException($"Error while trying to load Resource Id {resourceId}.", ex);
+                throw new SvgImageException($"Error while trying to load Resource {resourceId}/{Source}.", ex);
             }
         }
 
