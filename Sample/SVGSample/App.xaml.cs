@@ -11,7 +11,11 @@ namespace SVGSample
             InitializeComponent();
 
             Xamarin.Forms.Extensions.Svg.SvgImage.RegisterAssembly();
-
+            Xamarin.Forms.Extensions.Svg.SvgImage.ExceptionEvent += (sender, e) =>
+            {
+                var ex = ((Xamarin.Forms.Extensions.Svg.SvgImageExceptionEventArgs)e).SvgImageException;
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            };
             MainPage = new MainPage();
         }
 

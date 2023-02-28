@@ -62,6 +62,12 @@ namespace Xamarin.Forms.Extensions.Svg
 
         #endregion
 
+        #region Event
+
+        public static EventHandler<SvgImageExceptionEventArgs> ExceptionEvent { get; set; }
+
+        #endregion
+
         #region Constructor
 
         /// <summary>
@@ -168,7 +174,7 @@ namespace Xamarin.Forms.Extensions.Svg
             }
             catch (Exception ex)
             {
-                throw new SvgImageException($"Error while trying to load Resource {resourceId}/{Source}.", ex);
+                ExceptionEvent?.Invoke(this, new SvgImageExceptionEventArgs(new SvgImageException($"Error while trying to load Resource {resourceId}/{Source}.", ex)));
             }
         }
 
